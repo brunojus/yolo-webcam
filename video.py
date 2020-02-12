@@ -9,7 +9,7 @@ from yad2k.models.keras_yolo import yolo_head, yolo_eval
 from yad2k.yolo_utils import read_classes, read_anchors, preprocess_webcam_image, draw_boxes, \
     generate_colors
 
-stream = cv2.VideoCapture(0)
+stream = cv2.VideoCapture('udp://10.5.5.100:8554',cv2.CAP_FFMPEG)
 
 class_names = read_classes("model_data/coco_classes.txt")
 anchors = read_anchors("model_data/yolo_anchors.txt")
